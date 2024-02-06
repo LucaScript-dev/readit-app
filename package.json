@@ -1,0 +1,33 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "Master Electron Project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "reset": "git reset --hard",
+    "build": "electron-builder -w",
+    "win-cert": "electron-builder create-self-signed-cert -p lucascript"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.1",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.lucascript.readit",
+    "copyright": "Copyright LucaScript",
+    "win": {
+      "certificateFile": "private/lucascript.pfx",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "lucascript"
+    }
+  }
+}
